@@ -19,8 +19,6 @@ tags:
 
 ## Cryptodash Project Overview
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
-
 Developed as a personal project, <a href="https://cryptodash.singhharshit.me/">Cryptodash</a> is a Bitcoin Market Value Dashboard that showcases my skills in frontend development and my passion for cryptocurrency. Through this project, I aimed to expand my expertise in various areas, including authentication, authorization, Redux, Context API, and creating modularized components.
 
 ### Project Features and Learnings

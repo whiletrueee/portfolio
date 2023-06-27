@@ -1,11 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout
+	title="About | Jeanine White"
+	description="About Jeanine White Lorem Ipsum"
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -15,7 +19,7 @@ import Hero from '../components/Hero.astro';
 				<img
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
+					src="/assets/about.png"
 					alt="Jeanine White at work with a colleague"
 				/>
 			</Hero>
@@ -24,35 +28,94 @@ import Hero from '../components/Hero.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						I embarked on my career journey as a UI/UX designer
+						during my first year of college, immersing myself in the
+						art of creating user-centered designs and translating
+						intricate user requirements into impactful design
+						solutions. However, I soon realized that my ability to
+						bring those designs to life was limited. This
+						realization prompted my transition into frontend
+						development, where I discovered a newfound passion for
+						crafting captivating and functional web applications.
 					</p>
+					<br />
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						With hands-on experience in popular frameworks such as
+						ReactJS, NextJS, and Redux, I have honed my frontend
+						development skills. I have seamlessly integrated these
+						frameworks with CSS libraries like TailwindCSS and
+						MaterialUI, resulting in visually stunning and highly
+						responsive interfaces. Projects like CryptoDash
+						exemplify my ability to conceptualize and build
+						innovative applications, while my internship at Mable AI
+						exposed me to advanced tools and frameworks, where I
+						optimized components and gained proficiency in modular
+						API calls.
 					</p>
+					<br />
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						As my frontend skills flourished, I found myself
+						increasingly drawn to backend development and eagerly
+						delved into the world of server-side programming.
+						Proficient in technologies such as NodeJS, Express, and
+						MongoDB, I have tackled projects requiring intricate
+						backend functionality. Notably, my contributions as a
+						backend developer at the Barclays hackathon garnered
+						recognition for our team's inventive use of AWS,
+						resulting in an award for building a scalable and secure
+						platform.
+					</p>
+					<br />
+					<p>
+						Driven by a thirst for knowledge, I have recently begun
+						exploring the realm of DevOps, immersing myself in the
+						intricacies of deployment, infrastructure as code, and
+						automation. Proficient in tools such as Docker,
+						Kubernetes, and Git, I possess a solid understanding of
+						CI/CD workflows, allowing me to ensure seamless and
+						efficient application deployment.
+					</p>
+					<br />
+					<p>
+						My unwavering passion for crafting user-friendly
+						applications continues to fuel my personal and
+						professional growth. I approach every challenge with
+						enthusiasm, constantly expanding my skill set and
+						seeking new opportunities to broaden my horizons. With a
+						versatile background encompassing frontend, backend, and
+						DevOps expertise, I am excited to embark on new ventures
+						and contribute my skills to meaningful projects in the
+						future.
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p>B.Tech in CSE<span class="year">2020-2024</span><br>SRM Institue of Science and Technology, Chennai, India</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<div class="tags">
+						<Pill>Java</Pill>
+						<Pill>JavaScript</Pill>
+						<Pill>Typescript</Pill>
+						<Pill>HTML</Pill>
+						<Pill>CSS</Pill>
+						<Pill>TypeScript</Pill>
+						<Pill>JavaScript</Pill>
+						<Pill>ReactJS</Pill>
+						<Pill>NextJS</Pill>
+						<Pill>Redux</Pill>
+						<Pill>Styled Components</Pill>
+						<Pill>TailwindCSS</Pill>
+						<Pill>NodeJS</Pill>
+						<Pill>Express</Pill>
+						<Pill>MongoDB</Pill>
+						<Pill>Socket</Pill>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -67,7 +130,12 @@ import Hero from '../components/Hero.astro';
 		flex-direction: column;
 		gap: 3.5rem;
 	}
-
+.year{
+	font-size: 1rem;
+	color: var(--gray-200);
+	opacity: 0.8;
+	margin-left: 1rem;
+}
 	img {
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
@@ -100,6 +168,11 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
 
 	@media (min-width: 50em) {

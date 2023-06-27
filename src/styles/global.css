@@ -253,3 +253,8 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
